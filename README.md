@@ -1,7 +1,19 @@
-# Redis Demo
+## Redis Demo
 
-## Spin Up Redis with docker instance
+### Spin Up Redis with docker instance
 
-## Set key value
+```bash
+docker compose up -d (-d for detached mode)
+```
 
-## Set key with expiry
+### Enter into redis container
+
+```bash
+docker exec -it redis-db bash # redis-db is the container name provided
+```
+
+### Stop the redis container
+
+```bash
+docker compose down
+```
