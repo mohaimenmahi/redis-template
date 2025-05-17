@@ -3,7 +3,7 @@
 ### Spin Up Redis with docker instance
 
 ```bash
-docker compose up -d (-d for detached mode)
+docker compose up -d # -d for detached mode
 ```
 
 ### Enter into redis container
