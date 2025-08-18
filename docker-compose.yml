@@ -7,8 +7,11 @@ services:
     ports:
       - ${REDIS_PORT}:6379
     volumes:
-      - redis-data:/data
-    restart: always
+      - "redis-data:/data"
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    environment:
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
     networks:
       - redis-net
 
