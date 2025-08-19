@@ -28,7 +28,7 @@ SET existingkey "Update if exists" XX: Sets existingkey only if it already exist
 SET mykey "Updated Value" GET: Sets mykey to "Updated Value" and returns the old value of mykey.
 ```
 
-# Get values
+### Get values
 ```bash
 Syntax: GET key
 Examples:
