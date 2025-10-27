@@ -28,13 +28,29 @@ SET existingkey "Update if exists" XX: Sets existingkey only if it already exist
 SET mykey "Updated Value" GET: Sets mykey to "Updated Value" and returns the old value of mykey.
 ```
 
-### Get values
+### Get a value
 ```bash
 Syntax: GET key
 Examples:
 GET mykey: Retrieves the value of mykey.
 If mykey exists and holds a string value, that value is returned.
 If mykey does not exist, or if it holds a non-string data type, a special value nil (or equivalent in client libraries) is returned.
+```
+
+### Get all values
+```bash
+KEYS *
+```
+
+### Delete value(s)
+```bash
+DEL key [key...]
+
+# for a single key-value
+DEL key
+
+# for multiple keys
+DEL key1 key2 key3
 ```
 
 ### Stop the Redis container
